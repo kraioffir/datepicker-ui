@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f9;
+}
+
+.container {
+  position: relative; /* Essential for positioning the calendar dropdown */
+  width: 260px;
+}
+
+.input-group {
+  display: flex;
+  border: 2px solid #333;
+  background: #fff;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.input-group button {
+  background: #fff;
+  border: none;
+  border-left: 2px solid #333;
+  padding: 0 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Absolutely Positioned Calendar Element */
+.calendar {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 2px solid #333;
+  margin-top: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-weight: bold;
+  border-bottom: 1px solid #333;
+}
+
+.nav-btn {
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 8px 0;
+  border-bottom: 1px solid #333;
+  background: #fafafa;
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+
+.days-grid span {
+  padding: 8px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+  border-right: 1px solid #eee;
+}
+
+.days-grid span:nth-child(7n) {
+  border-right: none;
+}
